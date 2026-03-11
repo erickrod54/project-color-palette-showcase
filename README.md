@@ -62,3 +62,16 @@ export default defineConfig({
   }
 })
 ```
+
+## Installing Tailwind css + tailwind/vite-plugin
+
+- Installing tailwind css and vite plugin by - npm install tailwindcss @tailwindcss/vite
+
+```bash
+# This install tailwind + tailwind vite plugin
+npm install tailwindcss @tailwindcss/vite
+```
+
+> **Note:** after tailwind command, add @tailwind tag to index.css and also tailwindcss() plugin
+> vite config, in this step for index.css a new color pallete must be generated, the reference 
+> to get the color palette in # [Color Palette Projects Showcase](https://69b1a0d362d5792591d54ba5--color-pallete-projects-showcase.netlify.app/)
