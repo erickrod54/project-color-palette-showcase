@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Option 1: Executive Mint (Trust & Precision) --- */
+  --color-exec-primary: #1e293b;
+  --color-exec-accent: #10b981;
+  --color-exec-bg: #f8fafc;
+
+  /* --- Option 2: Royal Sand (Sophistication & Stability) --- */
+  --color-royal-primary: #374151;
+  --color-royal-accent: #d4af37;
+  --color-royal-bg: #f5f5f4;
+
+  /* --- Option 3: Technical Precision (Authority & Tech) --- */
+  --color-tech-navy: #1b263b;
+  --color-tech-teal: #415a77;
+  --color-tech-silver: #e0e1dd;
+
+  --radius-brand: 1rem;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-slate-50 text-slate-900;
+  }
+}
