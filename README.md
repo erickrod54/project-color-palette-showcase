@@ -43,3 +43,22 @@ npm create vite@latest
 
 > **Note:** after vite tooling install, the app won't display, so an extra configuration step must me done
 > at vite.config.js.
+
+## 2.- vite configuration ( making the app accesible )
+
+right after installation, vite conf vite will need additional configuration in order to show the app:
+
+```bash
+# vite conf adds host true + port 5173 (to ensure the port) 
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: true,
+    port: 5173, // Opcional, para asegurar el puerto
+  }
+})
+```
