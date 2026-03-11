@@ -73,5 +73,25 @@ npm install tailwindcss @tailwindcss/vite
 ```
 
 > **Note:** after tailwind command, add @tailwind tag to index.css and also tailwindcss() plugin
-> vite config, in this step for index.css a new color pallete must be generated, the reference 
+> vite config, in this step for index.css a new color pallete must be generated, the reference
 > to get the color palette in # [Color Palette Projects Showcase](https://69b1a0d362d5792591d54ba5--color-pallete-projects-showcase.netlify.app/)
+
+the vite configuration file need tailwind addition as plugin ( no postfix needed in tailwind v4 ):
+
+```bash
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(), // Add it to the plugins array
+  ],
+  server: {
+    host: true,
+    port: 5174, // Opcional, para asegurar el puerto
+  }
+})
+```
