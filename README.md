@@ -126,6 +126,32 @@ npm install @vitejs/plugin-basic-ssl
 npm run dev
 ```
 
+rigght after basicSsl instalation, the configuration has to be added to vite.config:
+
+```bash
+# BasicSsl is imported and addeed as a plugin
+# and https turn to true 
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite';
+import BasicSsl from '@vitejs/plugin-basic-ssl';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(), // Add it to the plugins array
+    BasicSsl()
+  ],
+  server: {
+    host: true,
+    port: 5174, // Opcional, para asegurar el puerto
+    https:true
+  }
+})
+```
+
 ### Why install `@types/node`?
 
 In modern ESM environments, Node.js does not globally recognize variables like `__dirname`. We install these types manually to:
