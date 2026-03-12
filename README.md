@@ -95,3 +95,45 @@ export default defineConfig({
   }
 })
 ```
+
+## 🏗 shadcn/ui Architecture (v4 Optimized)
+
+Unlike traditional component libraries, shadcn is not a closed package. Components are downloaded as source code directly into your `src/components/ui` folder, giving you 100% control.
+
+## Automatic Dependency Management
+
+When running `npx shadcn@latest init`, the modern CLI detects your environment and automatically configures:
+**`class-variance-authority` (cva):** For managing component variants (e.g., button sizes/colors).
+**`tailwind-merge` & `clsx`:** For intelligent class name merging.
+**`src/lib/utils.js`:** Automatically creates the `cn()` utility function used by these libraries.
+
+## 🛠 Core Tech Stack
+
+**Framework:** React + Vite (JS)
+**Styling:** Tailwind CSS v4 + shadcn/ui
+**Routing:** Wouter (Ultra-lightweight 2kb)
+**Security:** @vitejs/plugin-basic-ssl (Required for modern browser APIs)
+**Network:** Tailscale Mesh VPN
+
+### Why install `@types/node`?
+
+In modern ESM environments, Node.js does not globally recognize variables like `__dirname`. We install these types manually to:
+
+1. **Configure Path Aliases (`@/`):** Allow Vite to map `@` to the `/src` directory.
+2. **Fix Editor Warnings:** Resolve "not defined" errors in `vite.config.js` when using the `path` module.
+
+---
+
+## 📥 Step-by-Step Installation
+
+### 1. Preparation & Typing
+
+Install the base dependencies and Node definitions so your configuration files work without errors.
+
+```bash
+npm install
+npm install -D @types/node
+```
+
+> [!IMPORTANT]
+> Ensure your `vite.config.js` defines `__dirname` manually (using `fileURLToPath`) so that shadcn aliases work correctly in ESM modules.
