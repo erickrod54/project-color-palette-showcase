@@ -115,6 +115,17 @@ When running `npx shadcn@latest init`, the modern CLI detects your environment a
 **Security:** @vitejs/plugin-basic-ssl (Required for modern browser APIs)
 **Network:** Tailscale Mesh VPN
 
+## Plugin basicSsl ( @vitejs/plugin-basic-ssl - Required for modern browser APIs )
+
+this ssl plugin for self signed certificates is highly important for API's, for
+later back end and fornt end integration
+
+```bash
+# This is a comment inside the code block
+npm install @vitejs/plugin-basic-ssl
+npm run dev
+```
+
 ### Why install `@types/node`?
 
 In modern ESM environments, Node.js does not globally recognize variables like `__dirname`. We install these types manually to:
