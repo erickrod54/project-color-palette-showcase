@@ -63,7 +63,7 @@ export default defineConfig({
 })
 ```
 
-## Installing Tailwind css + tailwind/vite-plugin
+## 3.- Installing Tailwind css + tailwind/vite-plugin
 
 - Installing tailwind css and vite plugin by - npm install tailwindcss @tailwindcss/vite
 
@@ -96,7 +96,7 @@ export default defineConfig({
 })
 ```
 
-## 🏗 shadcn/ui Architecture (v4 Optimized)
+## 4.- 🏗 shadcn/ui Architecture (v4 Optimized) - Progress check
 
 Unlike traditional component libraries, shadcn is not a closed package. Components are downloaded as source code directly into your `src/components/ui` folder, giving you 100% control.
 
@@ -192,6 +192,22 @@ export default defineConfig({
     https:true
   }
 })
+```
+
+and the path for alliases must be indicated also in a jsconfig.js ( file must be made as follows and
+live next to vite.config - same root directory -)
+
+```bash
+//the configuration is standard
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
 ```
 
 ---
