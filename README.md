@@ -225,3 +225,11 @@ npm install -D @types/node
 
 > [!IMPORTANT]
 > Ensure your `vite.config.js` defines `__dirname` manually (using `fileURLToPath`) so that shadcn aliases work correctly in ESM modules.
+
+### Installing Wouter
+
+```bash
+npm install wouter
+```
+
+Right after installing wouter the routing is implemented in a root file, this case is App.jsx:
